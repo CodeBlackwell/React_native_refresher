@@ -3,6 +3,7 @@ import {Text, View, Image} from 'react-native';
 
 import Card from './Card';
 import CardSection from './CardSection';
+import Button from './button';
 
 const albumDetail = ({album}) => {
     const {
@@ -14,6 +15,7 @@ const albumDetail = ({album}) => {
 
     return (
         <Card>
+
             <CardSection>
                 <View style={styles.thumbnailContainerStyle}>
                     <Image
@@ -26,11 +28,13 @@ const albumDetail = ({album}) => {
                     <Text>{artist}</Text>
                 </View>
             </CardSection>
+
             <CardSection>
                 <Image
                     style={styles.imageStyle}
                     source={{uri: image}} />
             </CardSection>
+            <Button/>
         </Card>
     );
 };
